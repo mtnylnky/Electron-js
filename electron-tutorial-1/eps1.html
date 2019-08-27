@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"><!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./assets/fontawesome/css/fontawesome.min.css">
+        <link rel="stylesheet" href="./assets/fontawesome/css/brands.css">
+        <link rel="stylesheet" href="./assets/fontawesome/css/solid.css">
+    </head>
+    <body class="bg-secondary container">
+        <div class="row mt-5">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <video controls autoplay id="videoFile">
+                        <source src="./assets/bolum1.mp4" id="video_here"> 
+                    </video>
+                    
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+        <div class="row mt-1">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 text-right">
+                <a href="index.html" class="btn btn-light" role="button" aria-pressed="true"><i class="fas fa-reply"></i></i> Menüye Dön</a>
+                <button type="button" class="btn btn-light" onclick="tekrar()"><i class="fas fa-redo-alt"></i> Tekrar</button>
+                <a href="#" class="btn btn-light disabled" role="button" aria-pressed="true"><i class="fas fa-arrow-left"></i> Önceki</a>
+                <a href="eps2.html" class="btn btn-light" role="button" aria-pressed="true"><i class="fas fa-arrow-right"></i> Sonraki</a>
+                <button type="button" class="btn btn-light" onclick="window.top.close(); return false"><i class="fas fa-share"></i> Çıkış</button>
+            </div>
+            <div class="col-md-1"></div>
+        </div> 
+        <script src="./assets/js/jquery-3.4.1.min.js"></script>
+        <script src="./assets/js/popper.min.js"></script>
+        <script src="./assets/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            document.getElementById('videoFile').addEventListener('ended',myHandler,false);
+            function myHandler(e) {
+                if(!e) { e = window.event; }
+                window.location.href = "index.html";
+            }
+            function tekrar(){
+                var vid = document.getElementById('videoFile'); 
+                vid.play();
+                vid.currentTime ='0';
+            }
+        </script>
+    </body>
+</html>

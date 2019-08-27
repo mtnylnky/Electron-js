@@ -1,0 +1,23 @@
+{
+  "name": "myportal",
+  "productName": "myPOrtal App",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "bin": {
+    "electron": "./node_modules/.bin/electron"
+  },
+  "build": {
+    "extraResources": ["./extraResources/**"]
+  },
+  "author": "Metin Yalçınkaya",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^6.0.4",
+    "electron-packager": "^14.0.4"
+  }
+}
