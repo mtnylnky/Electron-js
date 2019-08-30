@@ -1,6 +1,7 @@
 ## Electron with Bootstrap
-You need dependencies in assets folder  
-Dependencies: 
+You create the ***assets*** folder and add the following requirements  
+  
+***Dependencies:***
 - Bootstrap
 - Fontawesome
 - Jquery
